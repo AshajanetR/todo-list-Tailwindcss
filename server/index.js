@@ -37,7 +37,7 @@ const FormDataModel1=mongoose.model('message',FormDataSchema1);
 passport.use("google",new GoogleStrategy({
     clientID:"180005062248-bppovs350d544510ogqkl9g34sdpso3r.apps.googleusercontent.com",
     clientSecret:"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",
-    callbackURL:"https://todo-list-tailwindcss-frontend.vercel.app/auth/callback",
+    callbackURL:"https://todo-list-tailwindcss-frontend.vercel.app/Home",
     userProfileURL:"https://www.googleapis.com/oauth2/v3/userinfo",
 
 },async(accessToken,refreshToken,profile,cb)=>{
