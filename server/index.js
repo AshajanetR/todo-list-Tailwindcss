@@ -13,7 +13,7 @@ const port=5000;
 app.use(express.json());
 app.use(cors());
 
-const mongoUri = process.env.MONGO_URI;
+const mongoUri = process.env.MONGO_URI
 
 const FormDataSchema=new mongoose.Schema({
     name:String,
