@@ -43,7 +43,7 @@ function handlesubmit(event){
 event.preventDefault();
 
 axios
-.post('http://localhost:5000/register',content)
+.post('https://todo-list-tailwindcss-backend.vercel.app/register',content)
 .then(res=>{
     console.log(res)
     if(res.data==="already registered!"){
@@ -79,7 +79,7 @@ axios
             </div>
         </form>
         <div className="flex justify-center ">
-            <a href="http://localhost:5000/auth" className="text-purple-700 shadow-sm ">Sign in with google</a>
+            <a href="https://todo-list-tailwindcss-backend.vercel.app/auth" className="text-purple-700 shadow-sm ">Sign in with google</a>
         </div>
     </div>
 </div>

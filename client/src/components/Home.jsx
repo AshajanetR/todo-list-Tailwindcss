@@ -8,7 +8,7 @@ function Home() {
 
   useEffect(() => {
     // Make GET request to fetch initial data
-    axios.get("http://localhost:5000/data")
+    axios.get("https://todo-list-tailwindcss-backend.vercel.app/data")
       .then((response) => {
         setres(response.data);
       })
@@ -27,7 +27,7 @@ function Home() {
         "unique":event.target.id
     }
     axios
-    .post("http://localhost:5000/delete",unique)
+    .post("https://todo-list-tailwindcss-backend.vercel.app/delete",unique)
     .then((response)=>{
 
         setres(response.data)
