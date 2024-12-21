@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    networks:
+      - my-bridge-network
+
+  server:
+    build: ./server
+    ports:
+      - "5000:5000"
+    depends_on:
+      - database
+    networks:
+      - my-bridge-network
+
+  database:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - my-bridge-network
+
+networks:
+  my-bridge-network:
+    driver : bridge
