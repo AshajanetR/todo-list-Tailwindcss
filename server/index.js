@@ -13,7 +13,7 @@ const port=5000;
 app.use(express.json());
 app.use(cors());
 
-const mongoUri = process.env.MONGO_URI
+// const mongoUri = process.env.MONGO_URI
 
 const FormDataSchema=new mongoose.Schema({
     name:String,
@@ -22,7 +22,7 @@ const FormDataSchema=new mongoose.Schema({
 })
 
 const FormDataModel=mongoose.model('log_reg_form',FormDataSchema);
-mongoose.connect(mongoUri);
+mongoose.connect("mongodb+srv://AshajanetR:Asha1310@todo-list.rdfvz.mongodb.net/?retryWrites=true&w=majority&appName=todo-list");
 mongoose.connection.on('connected', () => {
     console.log('Connected to MongoDB successfully!');
 });
