@@ -22,7 +22,7 @@ const FormDataSchema=new mongoose.Schema({
 })
 
 const FormDataModel=mongoose.model('log_reg_form',FormDataSchema);
-mongoose.connect("mongodb+srv://AshajanetR:Asha1310@todo-list.rdfvz.mongodb.net/?retryWrites=true&w=majority&appName=todo-list");
+mongoose.connect("mongodb+srv://vercel-admin-user:Asha1310@todo-list.rdfvz.mongodb.net/?retryWrites=true&w=majority&appName=todo-list");
 mongoose.connection.on('connected', () => {
     console.log('Connected to MongoDB successfully!');
 });
